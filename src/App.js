@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { DarkModeToggle } from "./components/DarkModeToggle";
+import { FontToggle } from "./components/FontToggle";
+import { Header } from "./components/Header";
+import Main from "./components/Main";
+import { SearchBox } from "./components/SearchBox";
+import { WordSearchProvider } from "./components/WordSearchProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WordSearchProvider>
+      <div className="dictionary-container ">
+        <div className="container ">
+          <Header>
+            <FontToggle />
+            <span className="divider"></span>
+            <DarkModeToggle />
+          </Header>
+          <SearchBox />
+          <Main />
+        </div>
+      </div>
+    </WordSearchProvider>
   );
 }
 

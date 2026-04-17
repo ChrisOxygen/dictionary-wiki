@@ -4,7 +4,7 @@ import { WordSearchContext } from "./WordSearchProvider";
 export function SearchBox() {
   const [query, setQuery] = useState("");
   const [emptySubmit, setEmptySubmit] = useState(false);
-  const { searchQuery, dispatch } = useContext(WordSearchContext);
+  const { dispatch } = useContext(WordSearchContext);
 
   function handleSubmit(e) {
     e.preventDefault();

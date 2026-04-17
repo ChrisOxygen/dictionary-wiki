@@ -22,8 +22,6 @@ export function FontToggle() {
     setMenuOpen((curr) => !curr);
   }
 
-  const fontList = ["Serif", "Sans Serif", "Mono"];
-
   return (
     <div className="font-dropdown">
       <div className="select" onClick={() => setMenuOpen((curr) => !curr)}>
